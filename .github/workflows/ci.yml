@@ -182,11 +182,8 @@ jobs:
               env:
                   COMPOSER_ROOT_VERSION: dev-master
 
-            - name: cat lockfile
-              run: cat composer.lock
-
-            - name: cat package-versions lockfile
-              run: cat vendor/composer/package-versions-deprecated/composer.lock
+            - name: debugging
+              run: sed '79 i var_dump($path, $data)' vendor/composer/package-versions-deprecated/src/PackageVersions/FallbackVersions.php || true
 
             - name: Show Psalm version
               run: vendor/bin/psalm --version
