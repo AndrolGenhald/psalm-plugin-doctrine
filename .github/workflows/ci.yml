@@ -182,8 +182,8 @@ jobs:
               env:
                   COMPOSER_ROOT_VERSION: dev-master
 
-            - name: debugging
-              run: sed -i '79 i var_dump($path, substr(file_get_contents($path), 0, 500));' vendor/composer/package-versions-deprecated/src/PackageVersions/FallbackVersions.php || true
+            # - name: debugging
+            #   run: sed -i '79 i var_dump($path, substr(file_get_contents($path), 0, 500));' vendor/composer/package-versions-deprecated/src/PackageVersions/FallbackVersions.php || true
 
             - name: Show Psalm version
               run: vendor/bin/psalm --version
