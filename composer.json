@@ -75,5 +75,10 @@
         "phpcs": "phpcs --colors",
         "psalm": "psalm",
         "test": "codecept --colors run -v"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

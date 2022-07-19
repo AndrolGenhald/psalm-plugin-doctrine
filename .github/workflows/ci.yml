@@ -182,6 +182,9 @@ jobs:
               env:
                   COMPOSER_ROOT_VERSION: dev-master
 
+            - name: cat lockfile
+              run: cat composer.lock
+
             - name: Show Psalm version
               run: vendor/bin/psalm --version
 
