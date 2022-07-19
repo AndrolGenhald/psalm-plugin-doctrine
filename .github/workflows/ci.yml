@@ -183,7 +183,7 @@ jobs:
                   COMPOSER_ROOT_VERSION: dev-master
 
             - name: debugging
-              run: sed -i '79 i ini_set("xdebug.var_display_max_children", 4); ini_set("xdebug.var_display_max_depth", 2); var_dump($path, $data);' vendor/composer/package-versions-deprecated/src/PackageVersions/FallbackVersions.php || true
+              run: sed -i '79 i ini_set("xdebug.var_display_max_children", "4"); ini_set("xdebug.var_display_max_depth", "2"); var_dump($path, $data);' vendor/composer/package-versions-deprecated/src/PackageVersions/FallbackVersions.php || true
 
             - name: Show Psalm version
               run: vendor/bin/psalm --version
