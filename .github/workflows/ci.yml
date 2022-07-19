@@ -185,6 +185,9 @@ jobs:
             - name: cat lockfile
               run: cat composer.lock
 
+            - name: cat package-versions lockfile
+              run: cat vendor/composer/package-versions-deprecated/composer.lock
+
             - name: Show Psalm version
               run: vendor/bin/psalm --version
 
